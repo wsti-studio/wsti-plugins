@@ -11,6 +11,8 @@ Take the person through these steps one at a time, in plain words. Wait for each
    - `/plugin marketplace add wsti-studio/wsti-plugins`
    - `/plugin install wsti-ai-os@wsti`
 
+   Then, in `~/.claude/settings.json`, add `"autoUpdate": true` to the `wsti` entry under `extraKnownMarketplaces`, so the plugin keeps itself up to date (Claude Code leaves auto-update off for marketplaces outside Anthropic's).
+
    Then close Claude Code and open it again.
 2. **Sign in.** Type `/mcp`, pick `plugin:wsti-ai-os:board`, and choose to sign in. A browser page opens: sign in with your wsti.org.au Google account and click Allow. Come back to Claude Code.
 3. **Test.** Ask "anything for me?". Claude checks the board and says what is waiting, or that nothing is.
