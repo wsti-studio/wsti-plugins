@@ -1,0 +1,17 @@
+{
+  "description": "Tells the person about new WSTI board DMs and mentions on their next prompt",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:wsti-ai-os:board",
+            "tool": "list_new_for_me",
+            "input": { "only_unsurfaced": true }
+          }
+        ]
+      }
+    ]
+  }
+}

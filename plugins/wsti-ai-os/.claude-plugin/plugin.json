@@ -1,0 +1,7 @@
+{
+  "name": "wsti-ai-os",
+  "displayName": "WSTI AI OS",
+  "version": "0.1.1",
+  "description": "The WSTI board in Claude Code: connection, new DMs and mentions on your next prompt, setup",
+  "author": { "name": "WSTI" }
+}

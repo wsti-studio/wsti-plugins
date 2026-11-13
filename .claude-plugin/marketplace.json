@@ -1,0 +1,12 @@
+{
+  "name": "wsti",
+  "description": "WSTI's Claude Code plugins",
+  "owner": { "name": "WSTI" },
+  "plugins": [
+    {
+      "name": "wsti-ai-os",
+      "source": "./plugins/wsti-ai-os",
+      "description": "The WSTI board in Claude Code: the team's message board, with new DMs and mentions shown on your next prompt"
+    }
+  ]
+}
