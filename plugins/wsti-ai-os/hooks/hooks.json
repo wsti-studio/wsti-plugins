@@ -1,6 +1,17 @@
 {
-  "description": "Tells the person about new WSTI board DMs and mentions on their next prompt",
+  "description": "Warns when the WSTI board is not signed in, and tells the person about waiting DMs and mentions on their next prompt",
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/board-signed-in.sh\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
@@ -8,7 +19,7 @@
             "type": "mcp_tool",
             "server": "plugin:wsti-ai-os:board",
             "tool": "list_new_for_me",
-            "input": { "only_unsurfaced": true }
+            "input": { "only_unsurfaced": true, "session_id": "${session_id}" }
           }
         ]
       }
